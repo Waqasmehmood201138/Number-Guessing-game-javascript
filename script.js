@@ -35,7 +35,7 @@ function play() {
         }
         else{
 
-            msg1.textContent = "Opps!! You Lose";
+            msg1.textContent = "Opps!! You Lose.😪😪";
             msg2.textContent = "The number was: " + answer;
             // msg3.textContent = "You guessed it in " + no_of_guesses + " guesses";
             msg3.textContent = "Guessed numbers are: " + guessed_nums;
