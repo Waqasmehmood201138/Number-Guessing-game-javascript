@@ -21,25 +21,32 @@ function play() {
             msg1.textContent = "Your guess is too low.😪";
             msg2.textContent = "No. of guesses remain: " + no_of_guesses_remain;
             msg3.textContent = "Guessed numbers are: " + guessed_nums;
+            document.getElementById("guess").value = " "
+            
         }
         else if (user_guess > answer && no_of_guesses_remain > 0) {
             msg1.textContent = "Your guess is too high.😲";
             msg2.textContent = "No. of guesses remain: " + no_of_guesses_remain;
             msg3.textContent = "Guessed numbers are: " + guessed_nums;
+            document.getElementById("guess").value = " "
         }
         else if (user_guess == answer && no_of_guesses > 0) {
             msg1.textContent = "Cograts You Win!!😍😍";
             msg2.textContent = "The number was: " + answer;
             msg3.textContent = "You guessed it in " + no_of_guesses + " guesses";
+            document.getElementById("guess").value = " "
+            document.getElementById("guess").disabled = true
             document.getElementById("my_btn").disabled = true;
+            
         }
         else{
 
-            msg1.textContent = "Opps!! You Lose.😪😪";
+            msg1.textContent = "Opps!! You Lose.😪😪 ";
             msg2.textContent = "The number was: " + answer;
             // msg3.textContent = "You guessed it in " + no_of_guesses + " guesses";
             msg3.textContent = "Guessed numbers are: " + guessed_nums;
-
+            document.getElementById("guess").value = " "
+            document.getElementById("guess").disabled = true
             document.getElementById("my_btn").disabled = true;
         }
     }
